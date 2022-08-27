@@ -20,7 +20,9 @@ export default function Home() {
   const [counters, setCounters] = useState([])
 
   const resetCounters = () =>{
-    console.log(counters)
+    const newCounters = []
+    counters.forEach(()=>newCounters.push(<Counter key={Math.random()}/>))
+    setCounters(newCounters)
   }
 
   return (
